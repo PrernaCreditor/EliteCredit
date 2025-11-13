@@ -1,0 +1,501 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1a365d; /* Navy blue */
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.portal-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 3rem auto;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left Section */
+/* Outer blue box */
+.service-summary-box {
+  background: #1a365d; /* Navy Blue Frame */
+  padding: 1.2rem;
+  border-radius: 18px;
+  max-width: 420px;
+  margin: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Inner golden content box */
+.service-summary {
+  background: #d4af37; /* Golden content */
+  color: #1a365d;       /* Navy text for contrast */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+/* Title */
+.service-summary h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Plan Name */
+.plan-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Feature List */
+.service-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.service-summary ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-summary ul li i {
+  color: #1a365d;
+  margin-right: 10px;
+}
+
+/* Price Highlight */
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1a365d;
+}
+
+
+/* Right Payment Section */
+.payment-section {
+  flex: 1.5;
+  padding: 1rem;
+  background: #f9f9fb;
+}
+
+.payment-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: #dcdcdc;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab.active {
+  background: #d4af37;
+  color: #1a365d;
+}
+
+.payment-form-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.bank-banner {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.accepted-text {
+  text-align: center;
+  color: #1a365d;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Input Styling */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #1a365d;
+  margin-bottom: 0.3rem;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Custom Select Styling */
+.input-group select {
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='navy' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+/* Input Row */
+.input-row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  padding: 0.9rem;
+  background: #d4af37;
+  color: #1a365d;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #d4af37;
+}
+
+/* Card Preview Section */
+.card-preview {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 320px;
+  height: 190px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card .front,
+.card .back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 1rem;
+  color: white;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card .front {
+  background: linear-gradient(to right, #1a365d, #d4af37);
+  box-shadow: 0 0 20px rgba(10, 31, 68, 0.5);
+}
+
+.card .back {
+  background: #1a365d;
+  transform: rotateY(180deg);
+}
+
+.card.flip .front {
+  transform: rotateY(180deg);
+}
+
+.card.flip .back {
+  transform: rotateY(360deg);
+}
+
+.card .number {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  letter-spacing: 2px;
+}
+
+.card .holder,
+.card .expiry {
+  font-size: 0.8rem;
+}
+
+.card .stripe {
+  background: #333;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.card .cvv-box {
+  background: #d4af37;
+  color: #1a365d;
+  padding: 0.5rem;
+  text-align: right;
+  border-radius: 4px;
+}
+
+.card .logo {
+  font-size: 1.2rem;
+  text-align: right;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+/* Bank Transfer Card Preview */
+.bank-preview {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.bank-card {
+  width: 200px;
+  height: 120px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+#bank-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.bank-logo-img {
+  max-height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+}
+/* Flip Animation for Credit/Debit Card */
+.card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.card.flip .front {
+  transform: rotateY(180deg);
+}
+
+.card.flip .back {
+  transform: rotateY(360deg);
+}
+
+
+/* Responsive Adjustments for Payment Page */
+@media (max-width: 768px) {
+  .portal-container {
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: none;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    min-height: 100vh; /* Ensure container takes at least full viewport height */
+    box-sizing: border-box; /* Include padding in height calculation */
+    padding-bottom: 40px; /* Increase bottom padding */
+  }
+
+  .service-summary-box {
+    margin: 0;
+    border-radius: 0;
+    max-width: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .service-summary {
+    padding: 1.5rem;
+    border-radius: 0;
+  }
+
+  .payment-section {
+    padding: 1rem; /* Adjust padding */
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .payment-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .tab {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .payment-form-container {
+    padding: 1rem; /* Adjust padding */
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Maintain gap between form groups */
+    padding-bottom: 40px; /* Increase padding at the bottom of the form container */
+    overflow-y: auto; /* Add vertical scrolling if content overflows */
+  }
+
+  .bank-banner {
+    max-width: 250px;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .accepted-text {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .payment-form {
+    gap: 1rem; /* Adjust gap */
+  }
+
+   .input-group {
+     margin-bottom: 0.8rem; /* Add some bottom margin to input groups */
+   }
+
+  .input-group label {
+    font-size: 0.95rem;
+  }
+
+  .input-group input,
+  .input-group select {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  button[type="submit"] {
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 1.5rem; /* Increase space above the submit button */
+  }
+
+  /* Card and Bank Preview Adjustments (Hidden on Mobile) */
+  .card-preview,
+  .bank-preview {
+    display: none; /* Hide card and bank preview on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-summary h2 {
+    font-size: 1.3rem;
+  }
+
+  .plan-name,
+  .price {
+    font-size: 0.95rem;
+  }
+
+  .service-summary ul li,
+  .input-group label,
+  .input-group input,
+  .input-group select,
+  button[type="submit"] {
+    font-size: 0.9rem;
+  }
+
+  .tab {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .bank-banner {
+    max-width: 200px;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  /* Card and Bank Preview Adjustments (Hidden on Mobile) */
+  .card-preview,
+  .bank-preview {
+    display: none; /* Hide card and bank preview on mobile */
+  }
+
+  /* Ensure card animation properties are not overridden */
+  /* These were moved outside the media query in a previous step, keeping here as comment for context */
+  /*
+  .card {
+    perspective: 1000px;
+  }
+
+  .card .front,
+  .card .back {
+    backface-visibility: hidden;
+    transition: transform 0.5s ease;
+  }
+
+  .card.flip .front {
+    transform: rotateY(180deg);
+  }
+
+  .card.flip .back {
+    transform: rotateY(360deg);
+  }
+  */
+}
+
