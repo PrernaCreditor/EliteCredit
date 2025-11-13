@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Elite Credit Solutions</title>
+    <link rel="icon" href="../assets/ELITECREDITLOGO.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        .services-detail-section {
+            padding: 100px 5%;
+            background: #f9f8f6;
+            min-height: 100vh;
+        }
+
+        .services-detail-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+        }
+
+        .services-sidebar {
+            position: sticky;
+            top: 100px;
+            width: 250px;
+            height: fit-content;
+            background: linear-gradient(135deg, #0a2342, #1a365d);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .services-sidebar h3 {
+            color: #d4af37;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .services-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .services-sidebar ul li {
+            margin-bottom: 0;
+        }
+
+        .services-sidebar ul li a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 15px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .services-sidebar ul li a::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .services-sidebar ul li a:hover {
+            background-color: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding-left: 35px;
+        }
+
+        .services-sidebar ul li a.active {
+            background-color: #d4af37;
+            color: #0a2342;
+            font-weight: 700;
+        }
+
+        .services-sidebar ul li a.active::before {
+            content: '✓';
+        }
+
+        .services-detail-container {
+            flex: 1;
+        }
+
+        .services-detail-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .services-detail-header h1 {
+            font-size: 3rem;
+            color: #0a2342;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .services-detail-header p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .service-detail-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 4px solid #d4af37;
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-detail-card .service-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0a2342, #1a365d);
+            color: #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .service-detail-card h3 {
+            font-size: 1.6rem;
+            color: #0a2342;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .service-detail-card h4 {
+            font-size: 1.1rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .service-detail-card p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-detail-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .service-detail-card ul li {
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: #555;
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .service-detail-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .service-detail-card .service-cta {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .service-detail-card .service-btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #0a2342;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .service-detail-card .service-btn:hover {
+            background-color: #f1c40f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .services-cta-section {
+            background: linear-gradient(135deg, #0a2342, #1a365d);
+            color: #ffffff;
+            padding: 60px 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .services-cta-section h2 {
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .services-cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .services-cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37, #f1c40f);
+            color: #0a2342;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .services-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .services-detail-header h1 {
+                font-size: 2rem;
+            }
+
+            .services-detail-wrapper {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .services-sidebar {
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+
+            .services-sidebar h3 {
+                font-size: 1.1rem;
+            }
+
+            .services-sidebar ul li a {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .service-detail-card {
+                padding: 30px 25px;
+            }
+
+            .services-cta-section {
+                padding: 40px 25px;
+            }
+
+            .services-cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<link rel="stylesheet" href="../styles.css">
+<nav class="navbar">
+  <!-- Left: Logo + Heading -->
+  <div class="navbar-left">
+    <a href="../index.html" class="logo-button">
+      <img src="../assets/elite.png" alt="Logo" class="navbar-logo">
+    </a>
+  </div>
+
+  <!-- Hamburger Menu Button -->
+  <button class="hamburger-menu" aria-label="Toggle Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Right: Navigation Links -->
+  <div class="navbar-links">
+    <div class="navbar-contact">
+      <span class="phone-numbers"><i class="fas fa-phone"></i> (239) 484-4426</span>
+    </div>
+    <a href="../index.html#home">Home</a>
+    <a href="../pages/about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="../index.html#contact">Connect</a>
+    <a href="payment.html" class="payment-btn"><i class="fas fa-credit-card"></i> Pay</a>
+    <a href="../login.html" class="connect-btn"><i class="fas fa-user"></i> Login</a>
+  </div>
+</nav>
+
+<!-- Services Detail Section -->
+<section class="services-detail-section">
+    <div class="services-detail-wrapper">
+        <!-- Sidebar with Quick Links -->
+        <aside class="services-sidebar">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#service-1" class="service-link active">Credit Repair Solutions</a></li>
+                <li><a href="#service-2" class="service-link">Credit Building Strategies</a></li>
+                <li><a href="#service-3" class="service-link">Financial Education & Insight</a></li>
+                <li><a href="#service-4" class="service-link">Credit & Business Consultations</a></li>
+                <li><a href="#service-5" class="service-link">Advanced Credit Strategies</a></li>
+                <li><a href="#service-6" class="service-link">Long-Term Partnership & Support</a></li>
+            </ul>
+        </aside>
+
+        <div class="services-detail-container">
+            <div class="services-detail-header">
+                <h1>Our Empowerment Services</h1>
+                <p>Comprehensive credit solutions designed to transform your financial future. Explore each service to discover how we can help you master credit and unlock opportunities.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-detail-card" id="service-1">
+                    <div class="service-number">1</div>
+                    <h3>Credit Repair Solutions</h3>
+                <h4>Dispute, restore, and revitalize your credit profile.</h4>
+                <p>We work with you to identify and challenge inaccuracies or unfair items dragging your score down. Through proven methods, we:</p>
+                <ul>
+                    <li>Analyze your credit reports for errors, duplicates, and outdated items</li>
+                    <li>Craft dispute strategies to remove or correct negative entries</li>
+                    <li>Communicate with bureaus, lenders, and agencies on your behalf</li>
+                    <li>Monitor results and follow up until resolution</li>
+                </ul>
+                <p><strong>The goal:</strong> renew confidence in your credit, restore accuracy, and pave the path for better financial opportunities.</p>
+                <div class="service-cta">
+                    <a href="payment.html" class="service-btn">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-detail-card" id="service-2">
+                <div class="service-number">2</div>
+                <h3>Credit Building Strategies</h3>
+                <h4>Develop habits and tools to strengthen your score over time.</h4>
+                <p>Good credit is built, not found. We help you adopt credit-building tactics that support long-term growth, including:</p>
+                <ul>
+                    <li>Secured cards, credit builder loans, or small-authorized use accounts</li>
+                    <li>Smart utilization and payment scheduling techniques</li>
+                    <li>Monitoring and adjusting credit mix and account age strategy</li>
+                    <li>Ongoing review and adaptation as your profile evolves</li>
+                </ul>
+                <p><strong>With consistent habits</strong> and strategic tools, we aim to make your credit work in your favor — instead of against you.</p>
+                <div class="service-cta">
+                    <a href="payment.html" class="service-btn">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-detail-card" id="service-3">
+                <div class="service-number">3</div>
+                <h3>Financial Education & Insight</h3>
+                <h4>Workshops, coaching & tools to master credit knowledge.</h4>
+                <p>Understanding credit is power. Through education, we help you gain clarity, confidence, and control by:</p>
+                <ul>
+                    <li>Hosting workshops on credit fundamentals, scoring factors, and strategy</li>
+                    <li>Offering one-on-one coaching tailored to your situation</li>
+                    <li>Delivering practical worksheets, calculators, and habit trackers</li>
+                    <li>Explaining how changes in finance, regulation, or lending can affect you</li>
+                </ul>
+                <p><strong>We don't just repair or build</strong> — we teach you how to see credit as a tool you can command over time.</p>
+                <div class="service-cta">
+                    <a href="payment.html" class="service-btn">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-detail-card" id="service-4">
+                <div class="service-number">4</div>
+                <h3>Credit & Business Consultations</h3>
+                <h4>Personalized plans linking your credit to your goals.</h4>
+                <p>Your credit should align with your broader ambitions. In consultation sessions, we:</p>
+                <ul>
+                    <li>Map your credit goals to your business or life strategy</li>
+                    <li>Evaluate existing accounts, liabilities, and opportunities</li>
+                    <li>Design tailored action plans and timelines for improvement</li>
+                    <li>Advise on credit for business formation, funding, or expansion</li>
+                </ul>
+                <p><strong>Whether you're starting, scaling, or pivoting,</strong> we pair credit insight with strategic vision so your financial moves are deliberate and effective.</p>
+                <div class="service-cta">
+                    <a href="payment.html" class="service-btn">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-detail-card" id="service-5">
+                <div class="service-number">5</div>
+                <h3>Advanced Credit Strategies</h3>
+                <h4>Private-level systems for growth & sustainable wealth.</h4>
+                <p>Once credit basics are in place, elevation is next. Our advanced strategies include:</p>
+                <ul>
+                    <li>Structuring layered credit accounts for greater borrowing capacity</li>
+                    <li>Leveraging credit for investments, real estate, or business lines</li>
+                    <li>Implementing asset protection, separation, and credit mobility techniques</li>
+                    <li>Monitoring risk, credit limits, and use thresholds strategically</li>
+                </ul>
+                <p><strong>This is the space where credit becomes a lever</strong>—not just for survival, but for calculated growth and sophisticated financial planning.</p>
+                <div class="service-cta">
+                    <a href="payment.html" class="service-btn">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-detail-card" id="service-6">
+                <div class="service-number">6</div>
+                <h3>Long-Term Partnership & Support</h3>
+                <h4>Ongoing guidance so your credit journey never stalls.</h4>
+                <p>We believe credit health is dynamic, not a one-off fix. Our continued support includes:</p>
+                <ul>
+                    <li>Regular check-ins and performance reviews</li>
+                    <li>Monthly or quarterly tune-ups to adjust strategy</li>
+                    <li>Alerts and recommendations for market or policy shifts</li>
+                    <li>Access to updates, resources, and deeper coaching when needed</li>
+                </ul>
+                <p><strong>With us by your side,</strong> your credit journey is never alone — it's a partnership oriented toward lasting growth and resilience.</p>
+                <div class="service-cta">
+                    <a href="payment.html" class="service-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="services-cta-section">
+            <h2>Ready to Transform Your Credit?</h2>
+            <p>Each service is tailored to meet you where you are and help you reach your financial goals. Choose the service that best fits your needs, or contact us to create a custom plan.</p>
+            <a href="../index.html#contact" class="services-cta-btn">Get Your Free Consultation</a>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-container">
+  <div class="footer-inner">
+    <div class="footer-columns">
+      <div class="footer-company-info">
+        <img src="../assets/ELITECREDITLOGO.png" alt="ELITE CREDIT SOLUTIONS" class="footer-logo-img">
+        <p class="footer-company-description">
+          At Elite Credit Solutions, we repair your credit so you can unlock opportunities and build lasting financial freedom.
+        </p>
+        <div class="footer-social-icons social-icons">
+          <a href="https://www.facebook.com/share/16CW6HwHCk/?mibextid=wwXIfr" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/fredrick-green-b4982838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:info@illuminantvitam.com" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/credithighrise1?igsh=MXd0dHMzcGY2d3Z4MA%3D%3D&utm_source=qr" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://x.com/illuminantvitam" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links-column">
+        <h3 class="footer-column-title">Quick Links <span class="footer-column-underline"></span></h3>
+        <ul class="footer-links-list">
+          <li><a href="privacyPolicy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer-link">Terms and Condition</a></li>
+          <li><a href="return.html" class="footer-link">Return and Refund Policy</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links-column">
+        <h3 class="footer-column-title">Services <span class="footer-column-underline"></span></h3>
+        <ul class="footer-links-list">
+          <li><a href="#service-1" class="footer-link">Credit Repair Solutions</a></li>
+          <li><a href="#service-2" class="footer-link">Credit Building Strategies</a></li>
+          <li><a href="#service-3" class="footer-link">Financial Education & Insight</a></li>
+          <li><a href="#service-4" class="footer-link">Credit & Business Consultations</a></li>
+          <li><a href="#service-5" class="footer-link">Advanced Credit Strategies</a></li>
+          <li><a href="#service-6" class="footer-link">Long-Term Partnership & Support</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact-column">
+        <h3 class="footer-column-title">Connect us <span class="footer-column-underline"></span></h3>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <p class="footer-contact-text">
+            ELITE CREDIT SOLUTIONS, LLC<br>
+            Exact street address of office or home<br>
+            city, state, and pincode
+          </p>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <p class="footer-contact-text">
+            (239) 484-4426<br>
+            <br>
+            Mon-Fri, 9am-6pm EST
+          </p>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <p class="footer-contact-text">
+            admin@credithighrise.com<br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>© 2025 ELITE CREDIT SOLUTIONS, LLC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu functionality
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navLinks = document.querySelector('.navbar-links');
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('.navbar-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Service links active state on scroll
+  const serviceLinks = document.querySelectorAll('.services-sidebar a.service-link');
+  const serviceCards = document.querySelectorAll('.service-detail-card');
+
+  // Set active link on click
+  serviceLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      serviceLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // Update active link based on scroll position
+  window.addEventListener('scroll', () => {
+    let current = '';
+    
+    serviceCards.forEach(card => {
+      const cardTop = card.offsetTop;
+      const cardHeight = card.clientHeight;
+      if (pageYOffset >= cardTop - 200) {
+        current = card.getAttribute('id');
+      }
+    });
+
+    serviceLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
