@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE CREDIT SOLUTIONS</title>
+    <link rel="icon" href="assets\ELITECREDITLOGO.png" type="image/png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVbTce+wV5mHV6ZpM5xB5GkVD0VQFzlm8J8E31GvFwB5Lx0kf9p2B6WZTcA2R1b2E1z9kUJ7z8rZ8ZxFZ4XmZg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" 
+  />
+    <style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+
+</head>
+<body>
+
+<!-- Navbar -->
+<link rel="stylesheet" href="styles.css">
+<nav class="navbar">
+  <!-- Left: Logo + Heading -->
+  <div class="navbar-left">
+    <a href="#home" class="logo-button">
+      <img src="assets\ELITECREDITLOGO.png" alt="Logo" class="navbar-logo">
+      <div class="navbar-heading">
+        <span class="navbar-title">ELITE CREDIT</span>
+  <span class="navbar-subtitle"style="color:white;">SOLUTIONS</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Hamburger Menu Button -->
+  <button class="hamburger-menu" aria-label="Toggle Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Right: Navigation Links -->
+  <div class="navbar-links">
+    <!-- Phone number moved here for mobile menu -->
+    <div class="navbar-contact">
+      
+      <span class="phone-numbers"><i class="fas fa-phone"></i> (239) 484-4426</span>
+    </div>
+    <div class="navbar-contact">
+      
+     
+    </div>
+    <a href="#home"> Home</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/services.html">Services</a>
+    <a href="#contact"> Connect </a>
+    <a href="pages/payment.html" class="payment-btn"><i class="fas fa-credit-card"></i> Pay</a>
+    <a href="login.html" class="connect-btn"><i class="fas fa-user"></i> Login</a>
+  </div>
+</nav>
+
+<!-- Rest of your HTML remains exactly the same... -->
+<section id="home" class="hero-section" onclick="smoothScrollToNextSection()">
+  <!-- Background Image with Overlay -->
+  <div class="hero-bg">
+    <img src="assets/HeroBG.jpg" alt="Financial Empowerment Background" class="hero-bg-image" />
+    <div class="hero-bg-overlay"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-text-container">
+      <h1>Transforming Credit Into Real Wealth</h1>
+      <p>
+        <span>
+          At Elite Credit Solutions, we are more than just a credit repair service — we are your partner in financial empowerment. We guide individuals and businesses in repairing, building, and mastering credit as the foundation of long‑term success.
+        </span>
+      </p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary">Our Services</a>
+        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-flex">
+      <!-- Left: Content -->
+      <div class="about-left" data-aos="fade-right">
+        <h2 class="section-title">
+          <span class="highlight">Elite Credit Solutions</span>
+          <span class="underline"></span>
+        </h2>
+        <p class="tagline">Where Credit Becomes Opportunity</p>
+        <p class="intro-paragraph">
+          At Elite Credit Solutions, we believe credit is real wealth. We empower individuals and businesses with the insight, tools, and clarity to view credit not as a burden, but a strategic asset you can wield to unlock better opportunities.
+        </p>
+
+        <div class="about-cards">
+          <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-lightbulb icon"></i>
+            <div>
+              <h4>Holistic Repair</h4>
+              <p>We don’t just fix credit — we identify root causes, dispute inaccuracies, and build healthier credit profiles.</p>
+            </div>
+          </div>
+          <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-chart-line icon"></i>
+            <div>
+              <h4>Education & Empowerment</h4>
+              <p>We provide consultations and insights so clients can understand credit and manage it wisely.</p>
+            </div>
+          </div>
+          <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-shield-alt icon"></i>
+            <div>
+              <h4>Strategic Growth</h4>
+              <p>We prepare you for advanced credit strategies and long-term financial independence.</p>
+            </div>
+          </div>
+        </div>
+
+        <blockquote class="quote" data-aos="fade-up" data-aos-delay="400">
+          “Credit is not a tool to fear, but a tool to master.”<br><span>– Elite Credit Solutions</span>
+        </blockquote>
+
+      </div>
+    </div>
+
+    <!-- Optionally, you might include a “right” side (image or graphic) here -->
+  </div>
+</section>
+
+<!--
+<section id="about" class="why-choose-section">
+  <div class="why-choose-decor"></div>
+  <div class="container-1200">
+    <div class="section-header">
+      <h2>
+        <span class="highlight">Why Choose Illuminant Vitam? </span>
+        <span class="underline"></span>
+      </h2>
+      <p><span>We deliver measurable transformation with a holistic, data-driven approach tailored to your unique goals.</span></p>
+    </div>
+
+    <div class="content-grid">
+      <div class="stats-cards">
+        <div class="card">
+          <div class="number">0+</div>
+          <p>Businesses Served</p>
+          <div class="underline"></div>
+        </div>
+
+        <div class="card">
+          <div class="number">0%</div>
+          <p>Client Retention</p>
+          <div class="underline"></div>
+        </div>
+
+        <div class="card">
+          <div class="number">0+</div>
+          <p>Industries Served</p>
+          <div class="underline"></div>
+        </div>
+
+        <div class="card">
+          <div class="number">0x</div>
+          <p>Average ROI</p>
+          <div class="underline"></div>
+        </div>
+
+        <div class="card">
+          <div class="number">100%</div>
+          <p>Dedicated Support</p>
+          <div class="underline"></div>
+        </div>
+
+        <div class="card">
+          <div class="number">100%</div>
+          <p>Custom Solutions</p>
+          <div class="underline"></div>
+        </div>
+      </div>
+
+      <div class="benefits-list">
+        <h3>
+          <span class="highlight">Our Competitive Edge</span>
+          <span class="underline"></span>
+        </h3>
+        <ul>
+          <li>
+            <div class="icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Data-Driven Marketing Strategies</h4>
+              <p>Actionable insights from comprehensive market analysis</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Tailored Creative Solutions</h4>
+              <p>Custom branding that resonates with your audience</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Streamlined Operations</h4>
+              <p>Efficiency audits that reduce costs by 15-40%</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-wrapper">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Holistic Growth Approach</h4>
+              <p>Integrated solutions across all business functions</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<section id="services" class="services-section">
+  <div class="services-container">
+    <div class="services-header" data-aos="fade-up">
+      <div class="services-header-content">
+        <h1 class="services-title">Our Empowerment Services</h1>
+        <p class="services-intro">
+          <em>We repair credit, build healthy financial habits, and equip you with credit‑knowledge so you can access opportunities across business and life.</em>
+        </p>
+      </div>
+    </div>
+
+    <div class="modern-cards-grid">
+      <!-- Loop Cards -->
+      <div class="modern-card" onclick="openServicePopup(0)" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon"><img src="assets/ELITECREDITLOGO.png" alt="Logo" class="card-logo"></div>
+        <div class="card-content">
+          <h3>Credit Repair Solutions</h3>
+          <h4>Identify errors, dispute unfair items, and restore your credit profile.</h4>
+        </div>
+      </div>
+
+      <div class="modern-card" onclick="openServicePopup(1)" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-icon"><img src="assets/ELITECREDITLOGO.png" alt="Logo" class="card-logo"></div>
+        <div class="card-content">
+          <h3>Credit Building Strategies</h3>
+          <h4>Effective habits & scoring tools so your credit works for you.</h4>
+        </div>
+      </div>
+
+      <div class="modern-card" onclick="openServicePopup(2)" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-icon"><img src="assets/ELITECREDITLOGO.png" alt="Logo" class="card-logo"></div>
+        <div class="card-content">
+          <h3>Financial Education & Insight</h3>
+          <h4>Workshops, coaching & guidance to understand credit like a pro.</h4>
+        </div>
+      </div>
+
+      <div class="modern-card" onclick="openServicePopup(3)" data-aos="fade-up" data-aos-delay="400">
+        <div class="card-icon"><img src="assets/ELITECREDITLOGO.png" alt="Logo" class="card-logo"></div>
+        <div class="card-content">
+          <h3>Credit & Business Consultations</h3>
+          <h4>One‑on‑one plans to align your credit with your business & financial goals.</h4>
+        </div>
+      </div>
+
+      <div class="modern-card" onclick="openServicePopup(4)" data-aos="fade-up" data-aos-delay="500">
+        <div class="card-icon"><img src="assets/ELITECREDITLOGO.png" alt="Logo" class="card-logo"></div>
+        <div class="card-content">
+          <h3>Advanced Credit Strategies</h3>
+          <h4>Private credit and financial systems for growth & sustainable wealth.</h4>
+        </div>
+      </div>
+
+      <div class="modern-card" onclick="openServicePopup(5)" data-aos="fade-up" data-aos-delay="600">
+        <div class="card-icon"><img src="assets/ELITECREDITLOGO.png" alt="Logo" class="card-logo"></div>
+        <div class="card-content">
+          <h3>Long-Term Partnership & Support</h3>
+          <h4>Ongoing guidance & empowerment so your credit journey never stalls.</h4>
+        </div>
+      </div>
+
+      <!-- Closing Section -->
+      <div class="full-width-text" data-aos="fade-up" data-aos-delay="700">
+        <h2>Ready to Take Control of Your Credit?</h2>
+        <h3>Let’s move from burden to empowerment—credit done right.</h3>
+        <p>Whether you're repairing now or preparing for advanced strategies ahead, we tailor our support to meet you where you are — and help you go where you're meant to lead.</p>
+        <ul>
+          <li><a href="#contact">Request a Free Credit Assessment</a></li>
+          <li><a href="#services">Explore Service Packages</a></li>
+          <li><a href="#contact">Contact Us for a Tailored Plan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="opt-service-btn-wrapper" data-aos="zoom-in">
+      <a href="pages/payment.html" class="opt-service-btn">Partner With Us Today!</a>
+    </div>
+  </div>
+</section>
+
+<!--Why Us Section-->
+<section class="why-us-section">
+  <div class="why-us-bg-decor"></div>
+  <div class="container-1200">
+    <div class="section-header">
+      <h2>
+        <span class="highlight">Why Partner With Elite Credit Solutions?</span>
+        <span class="underline"></span>
+      </h2>
+      <p><span><h1>We turn Credit into Opportunity.</h1><br>We empower individuals and businesses to transform their financial futures by mastering credit—unlocking doors to greater opportunities in both public and private sectors.</span></p>
+    </div>
+
+    <div class="why-us-grid">
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-bullseye"></i></div>
+        <h4>Goal-Oriented Strategy</h4>
+        <p>Every move is aligned with your mission to achieve tangible success.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+        <h4>Creative Brilliance</h4>
+        <p>Standout ideas with precision execution for modern business growth.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-rocket"></i></div>
+        <h4>Scalable Solutions</h4>
+        <p>Robust architecture built to evolve as your brand grows.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon"><i class="fas fa-handshake"></i></div>
+        <h4>Client-Centric Focus</h4>
+        <p>Your vision is our blueprint. We deliver results with care and integrity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-form-box animate slide-in-left">
+      <h2 class="form-title">Connect with Us<span class="underline"></span></h2>
+      <form id="contactForm">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" placeholder="John" required />
+          </div>
+          <div class="input-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" placeholder="you@email.com" required />
+        </div>
+        <div class="input-group">
+          <label for="companyName">Company Name</label>
+          <input type="text" id="companyName" placeholder="Your Company" />
+        </div>
+        <div class="input-group">
+          <label for="timeSlot">Available Time Slot *</label>
+          <select id="timeSlot" required>
+            <option value="">Choose a time</option>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Would you like a video demo?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="videoDemo" value="yes" required /> Yes</label>
+            <label><input type="radio" name="videoDemo" value="no" required /> No</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info-box animate slide-in-right">
+      <div class="logo-box">
+        <img src="assets/elite.png" alt="ELITE CREDIT SOLUTIONS LOGO " />
+      </div>
+      <h2 class="info-title">Contact Us</h2>
+      <div class="info-card">
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h3>Our Office</h3>
+            <p>Exact address or street number <br>city , state and pincode </p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h3>Call Us</h3>
+            <p>(239) 484-4426<br><br>Mon–Fri, 9am–6pm EST<br><b>Fax:</b></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h3>Email Us</h3>
+            <p>admin@credithighrise.com<br></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!---FOOTER---->
+<footer class="footer-container">
+  <div class="footer-inner">
+    <!-- Footer Columns -->
+    <div class="footer-columns">
+      <!-- Company Info Column -->
+      <div class="footer-company-info">
+        <img src="assets/ELITECREDITLOGO.png" alt="ELITE CREDIT SOLUTIONS" class="footer-logo-img">
+        <p class="footer-company-description">
+          At Elite Credit Solutions, we repair your credit so you can unlock opportunities and build lasting financial freedom.
+        </p>
+        <div class="footer-social-icons social-icons">
+          <a href="https://www.facebook.com/share/16CW6HwHCk/?mibextid=wwXIfr" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/fredrick-green-b4982838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:info@illuminantvitam.com" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/credithighrise1?igsh=MXd0dHMzcGY2d3Z4MA%3D%3D&utm_source=qr" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://x.com/illuminantvitam" class="icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Quick Links Column -->
+      <div class="footer-links-column">
+        <h3 class="footer-column-title">Quick Links <span class="footer-column-underline"></span></h3>
+        <ul class="footer-links-list">
+          <li><a href="pages/privacyPolicy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="pages/terms.html" class="footer-link">Terms and Condition</a></li>
+          <li><a href="pages/return.html" class="footer-link">Return and Refund Policy</a></li>
+        </ul>
+      </div>
+      
+      <!-- Services Column -->
+      <div class="footer-links-column">
+        <h3 class="footer-column-title">Services <span class="footer-column-underline"></span></h3>
+        <ul class="footer-links-list">
+          <li><a href="pages/services.html#service-1" class="footer-link">Credit Repair Solutions</a></li>
+          <li><a href="pages/services.html#service-2" class="footer-link">Credit Building Strategies</a></li>
+          <li><a href="pages/services.html#service-3" class="footer-link">Financial Education & Insight</a></li>
+          <li><a href="pages/services.html#service-4" class="footer-link">Credit & Business Consultations</a></li>
+          <li><a href="pages/services.html#service-5" class="footer-link">Advanced Credit Strategies</a></li>
+           <li><a href="pages/services.html#service-6" class="footer-link">Long-Term Partnership & Support</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info Column -->
+      <div class="footer-contact-column">
+        <h3 class="footer-column-title">Connect us <span class="footer-column-underline"></span></h3>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <p class="footer-contact-text">
+            ELITE CREDIT SOLUTIONS, LLC<br>
+            Exact street address of office or home<br>
+            city, state, and pincode
+          </p>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <p class="footer-contact-text">
+            (239) 484-4426<br>
+            <br>
+            Mon-Fri, 9am-6pm EST
+          </p>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <i class="fas fa-fax"></i>
+          </div>
+          <p class="footer-contact-text">
+           
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <p class="footer-contact-text">
+            admin@credithighrise.com<br>
+           
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      <p>© 2025 ELITE CREDIT SOLUTIONS, LLC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger menu functionality
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navLinks = document.querySelector('.navbar-links');
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('.navbar-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
+
+<!-- Add this before the closing body tag -->
+<div id="servicePopup" class="service-popup">
+  <div class="popup-content">
+    <button class="close-popup" onclick="closeServicePopup()">&times;</button>
+    <div class="popup-header">
+      <div class="popup-icon">
+        <img src="assets/ELITECREDITLOGO.png" alt="Illuminant Vitam Solutions Logo" class="popup-logo">
+      </div>
+      <h2 class="popup-title"></h2>
+      <h3 class="popup-subtitle"></h3>
+    </div>
+    <div class="popup-body"></div>
+  </div>
+</div>
+
+<script>
+// Service content data
+const serviceContent = [
+  {
+  title: "Service 1: Credit Repair Solutions" ,
+  subtitle: "Dispute, restore, and revitalize your credit profile.",
+  content: `<p>We work with you to identify and challenge inaccuracies or unfair items dragging your score down. Through proven methods, we:</p>
+    <ul>
+      <li>Analyze your credit reports for errors, duplicates, and outdated items</li>
+      <li>Craft dispute strategies to remove or correct negative entries</li>
+      <li>Communicate with bureaus, lenders, and agencies on your behalf</li>
+      <li>Monitor results and follow up until resolution</li>
+    </ul>
+    <p>The goal: renew confidence in your credit, restore accuracy, and pave the path for better financial opportunities.</p>`
+},
+{
+  title: "Service 2: Credit Building Strategies",
+  subtitle: "Develop habits and tools to strengthen your score over time.",
+  content: `<p>Good credit is built, not found. We help you adopt credit‑building tactics that support long-term growth, including:</p>
+    <ul>
+      <li>Secured cards, credit builder loans, or small-authorized use accounts</li>
+      <li>Smart utilization and payment scheduling techniques</li>
+      <li>Monitoring and adjusting credit mix and account age strategy</li>
+      <li>Ongoing review and adaptation as your profile evolves</li>
+    </ul>
+    <p>With consistent habits and strategic tools, we aim to make your credit work in your favor — instead of against you.</p>`
+},
+{
+  title: "Service 3: Financial Education & Insight",
+  subtitle: "Workshops, coaching & tools to master credit knowledge.",
+  content: `<p>Understanding credit is power. Through education, we help you gain clarity, confidence, and control by:</p>
+    <ul>
+      <li>Hosting workshops on credit fundamentals, scoring factors, and strategy</li>
+      <li>Offering one-on-one coaching tailored to your situation</li>
+      <li>Delivering practical worksheets, calculators, and habit trackers</li>
+      <li>Explaining how changes in finance, regulation, or lending can affect you</li>
+    </ul>
+    <p>We don’t just repair or build — we teach you how to see credit as a tool you can command over time.</p>`
+},
+{
+  title: "Service 4: Credit & Business Consultations",
+  subtitle: "Personalized plans linking your credit to your goals.",
+  content: `<p>Your credit should align with your broader ambitions. In consultation sessions, we:</p>
+    <ul>
+      <li>Map your credit goals to your business or life strategy</li>
+      <li>Evaluate existing accounts, liabilities, and opportunities</li>
+      <li>Design tailored action plans and timelines for improvement</li>
+      <li>Advise on credit for business formation, funding, or expansion</li>
+    </ul>
+    <p>Whether you’re starting, scaling, or pivoting, we pair credit insight with strategic vision so your financial moves are deliberate and effective.</p>`
+},
+{
+  title: "Service 5: Advanced Credit Strategies",
+  subtitle: "Private-level systems for growth & sustainable wealth.",
+  content: `<p>Once credit basics are in place, elevation is next. Our advanced strategies include:</p>
+    <ul>
+      <li>Structuring layered credit accounts for greater borrowing capacity</li>
+      <li>Leveraging credit for investments, real estate, or business lines</li>
+      <li>Implementing asset protection, separation, and credit mobility techniques</li>
+      <li>Monitoring risk, credit limits, and use thresholds strategically</li>
+    </ul>
+    <p>This is the space where credit becomes a lever—not just for survival, but for calculated growth and sophisticated financial planning.</p>`
+},
+{
+  title: "Service 6: Long-Term Partnership & Support",
+  subtitle: "Ongoing guidance so your credit journey never stalls.",
+  content: `<p>We believe credit health is dynamic, not a one-off fix. Our continued support includes:</p>
+    <ul>
+      <li>Regular check-ins and performance reviews</li>
+      <li>Monthly or quarterly tune-ups to adjust strategy</li>
+      <li>Alerts and recommendations for market or policy shifts</li>
+      <li>Access to updates, resources, and deeper coaching when needed</li>
+    </ul>
+    <p>With us by your side, your credit journey is never alone — it’s a partnership oriented toward lasting growth and resilience.</p>`
+}
+
+];
+
+function openServicePopup(index) {
+  const popup = document.getElementById('servicePopup');
+  const service = serviceContent[index];
+  
+  document.querySelector('.popup-title').textContent = service.title;
+  document.querySelector('.popup-subtitle').textContent = service.subtitle;
+  document.querySelector('.popup-body').innerHTML = service.content;
+  
+  popup.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeServicePopup() {
+  const popup = document.getElementById('servicePopup');
+  popup.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close popup when clicking outside
+document.getElementById('servicePopup').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeServicePopup();
+  }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeServicePopup();
+  }
+});
+</script>
+
+</body>
+</html>
