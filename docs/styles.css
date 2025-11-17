@@ -48,43 +48,13 @@ input[type="submit"] {
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.logo-button {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: inherit;
-  border: 0;
+  gap: 0px;
 }
 
 .navbar-logo {
   height: 70px;
   object-fit: contain;
    filter: drop-shadow(0 0 4px hsla(0, 7%, 89%, 0.8));
-}
-
-.navbar-heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  line-height: 1.1;
-  color: gold;
-  font-family: "Georgia",serif;
-}
-
-.navbar-title {
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.navbar-subtitle {
-  font-size: 1rem;
-  font-weight: 600;
 }
 
 .navbar-contact {
@@ -119,7 +89,7 @@ input[type="submit"] {
 
 .navbar-links a {
   text-decoration: none;
-  color:gold;
+  color: gold;
   font-weight: 500;
   position: relative;
 }
@@ -1242,7 +1212,7 @@ input[type="submit"] {
 /* Contact Section Base Styles */
 .contact-section {
   padding: 80px 5%;
-  background: linear-gradient(135deg, #061831, #0a2342);
+  background-image:url('assets/creditimage.jpg');
 }
 
 /* Layout Container */
