@@ -21,131 +21,240 @@ input[type="submit"] {
   }
 
 
+/* ================= NAVBAR ================= */
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 32px;
-  background: transparent;
-  box-shadow: 0 1px 3px rgba(188, 187, 187, 0.1);
   position: relative;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+  background-color: #073055;             /* solid blue bar like screenshot */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
-/* Navbar */
+/* blue background layer if you still want ::before */
 .navbar::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(76, 137, 212, 0.85) 30%, rgba(10,35,66,0.7) 100%);
+  inset: 0;
+  background-color: #073055;
   z-index: -1;
-  pointer-events: none;
 }
 
-.navbar-left {
+/* Left side */
+.logo-button {
   display: flex;
   align-items: center;
   gap: 16px;
+  text-decoration: none;
 }
 
 .navbar-logo {
   height: 70px;
   object-fit: contain;
-   filter: drop-shadow(0 0 4px hsla(0, 7%, 89%, 0.8));
 }
 
-.navbar-brand-text {
+.navbar-heading {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  line-height: 1.1;
 }
 
-.navbar-brand-name {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #d4af37;
-  line-height: 1.2;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+.navbar-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffd700;                         /* bright gold */
 }
 
-.navbar-brand-subtitle {
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: 500;
+.navbar-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   color: #ffffff;
-  line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.navbar-contact {
-  display: flex;
-  padding-left: 10px;
-  align-items: center;
-  gap: 5px;
-}
-
-.phone-icon {
-  color: #d4af37;
-  font-size: 14px;
-}
-.fax-icon {
-  color: #000000;
-  font-size: 14px;
-}
-
-.phone-numbers {
-  color: #000000;
-  font-size: 14px;
-}
-.fax-numbers {
-  color: #000000;
-  font-size: 14px;
-}
+/* Right side */
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
 }
 
+/* phone in the middle */
+.navbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 12px;
+}
+
+.phone-icon {
+  color: #ffd700;
+  font-size: 0.95rem;
+}
+
+.phone-numbers {
+  color: #ffd700;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* regular links */
 .navbar-links a {
-  text-decoration: none;
-  color: #070707;
-  font-weight: 500;
   position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffd700;
 }
 
 .navbar-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -6px;
   width: 0;
   height: 2px;
-  background-color: #d4af37;
-  transition: width 0.3s ease-in-out;
+  background-color: #ffd700;
+  transition: width 0.25s ease;
 }
 
 .navbar-links a:hover::after {
   width: 100%;
 }
 
-.navbar-links a:hover {
-  color: #e4bb21; /* Slightly darker gold on hover */
+/* Pills on the right */
+.payment-btn,
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-.connect-btn {
-  color: #5288d3 !important;
-  background-color: #d4af37 !important;
-  padding: 8px 16px !important;
-  border-radius: 9999px !important;
-  font-weight: bold !important;
-  text-align: center  !important;
-  display: inline-block !important;
+/* Pay: pill style, card icon */
+.payment-btn {
+  background-color: #ffd700;
+  color: #073055;
+}
+
+/* Login button: yellow background + blue text */
+.login-btn {
+  background-color: #ffd700;
+  color: #073055 !important;   /* 🔵 force text to blue */
+}
+
+/* Icons */
+.payment-btn i,
+.login-btn i {
+  font-size: 0.95rem;
+  color: #073055 !important;   /* 🔵 icon also blue */
+}
+
+/* Hover effect */
+.payment-btn:hover,
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.45);
+  background-color: #f1c40f;
+}
+
+
+/* ============ MOBILE (keeps your hamburger behavior) ============ */
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000;
+}
+
+.hamburger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: #ffd700;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #073055;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 24px 24px;
+    gap: 18px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 6px rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .navbar-links a {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .navbar-links a::after {
+    bottom: 0;
+  }
+
+  .navbar-contact {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding-bottom: 12px;
+    width: 100%;
+  }
+
+  .payment-btn,
+  .login-btn {
+    width: 100%;
+    justify-content: center;
+    
+  }
+
+  /* hamburger cross animation */
+  .hamburger-menu.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
 }
 
 .hero-section {
@@ -181,7 +290,7 @@ input[type="submit"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(56, 115, 186, 0.85) 10%, rgba(10,35,66,0.7) 100%);
+  background: linear-gradient(90deg, rgba(7, 32, 63, 0.85) 30%, rgba(10,35,66,0.7) 100%);
 }
 
 /* Content */
@@ -242,7 +351,7 @@ input[type="submit"] {
 
 .btn-primary {
   background-color: #d4af37;
-  color: #4886d1;
+  color: #072344;
 }
 
 .btn-secondary {
@@ -1192,19 +1301,6 @@ input[type="submit"] {
     height: 50px;
   }
 
-  /* Adjust brand text size on mobile */
-  .navbar-brand-name {
-    font-size: 1.2rem;
-  }
-
-  .navbar-brand-subtitle {
-    font-size: 0.75rem;
-  }
-
-  .navbar-left {
-    gap: 12px;
-  }
-
   /* Show phone number inside active mobile menu */
   .navbar-links.active .navbar-contact {
     display: flex;
@@ -1250,7 +1346,7 @@ input[type="submit"] {
 /* Contact Section Base Styles */
 .contact-section {
   padding: 80px 5%;
-  background-image:url('assets/creditimage.jpg');
+   background: linear-gradient(135deg, #fffdf6 0%, #f7efe0 45%, #fdf9f1 100%);
 }
 
 /* Layout Container */

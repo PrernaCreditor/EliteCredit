@@ -10,34 +10,49 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Navbar -->
-    <nav class="navbar">
-    <!-- Left: Logo + Heading -->
-    <div class="navbar-left">
-        <img src="../assets/ELITECREDITCOMPLETELOGO.png" alt="Logo" class="navbar-logo">
-    </div>
-
-    <!-- Hamburger Menu Button -->
-    <button class="hamburger-menu" aria-label="Toggle Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Right: Navigation Links -->
-    <div class="navbar-links">
-      <!-- Phone number moved here for mobile menu -->
-      <div class="navbar-contact">
-        <i class="fas fa-phone phone-icon"></i>
-        <span class="phone-numbers">(239) 484-4426| XXX XXX -XXXX</span>
+ <!-- Navbar -->
+<link rel="stylesheet" href="styles.css">
+<!-- Navbar -->
+<nav class="navbar">
+  <!-- Left: Logo + Heading -->
+  <div class="navbar-left">
+    <a href="../index.html" class="logo-button">
+      <img src="../assets/ELITECREDITLOGO.png" alt="Logo" class="navbar-logo" />
+      <div class="navbar-heading">
+        <span class="navbar-title">ELITE CREDIT</span>
+        <span class="navbar-subtitle">SOLUTIONS</span>
       </div>
-      <a href="../index.html">Home</a>
-      <a href="../index.html#about">About</a>
-      <a href="../index.html#services">Services</a>
-      <a href="../index.html#contact">Contact</a>
-      <a href="../login.html" class="connect-btn">Login/SignUp</a>
+    </a>
+  </div>
+
+  <!-- Hamburger (mobile) -->
+  <button class="hamburger-menu" aria-label="Toggle Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Right: Phone + Links -->
+  <div class="navbar-links">
+    <div class="navbar-contact">
+      <i class="fas fa-phone phone-icon"></i>
+      <span class="phone-numbers">(239) 484-4426</span>
     </div>
-    </nav>
+
+    <a href="../index.html">Home</a>
+    <a href="../pages/about.html">About</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#contact">Connect</a>
+
+    <a href="../pages/payment.html" >
+      <i class="fas fa-credit-card"></i> Pay
+    </a>
+
+    <a href="../login.html" class="login-btn">
+      <i class="fas fa-user"></i> Login
+    </a>
+  </div>
+</nav>
   <div class="terms-wrapper">
     <section class="terms-header">
       <h1>Terms & Conditions</h1>
