@@ -146,6 +146,12 @@ input[type="submit"] {
   background-color: #ffd700;
   color: #073055;
 }
+.opt-service-buttons {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  gap: 20px; /* Space between buttons */
+  align-items: center; /* Center them */
+}
 
 /* Login button: yellow background + blue text */
 .login-btn {
