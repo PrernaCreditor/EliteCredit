@@ -421,6 +421,7 @@
         </div>
         <button type="submit" class="submit-btn">Submit</button>
       </form>
+      <p id="status"></p>
     </div>
 
     <!-- Contact Info -->
@@ -712,6 +713,57 @@ document.addEventListener('keydown', function(e) {
     closeServicePopup();
   }
 });
+</script>
+
+<script>
+  const contactForm = document.getElementById("contactForm");
+  const statusText = document.getElementById("status");
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const videoDemoEl = document.querySelector(
+      'input[name="videoDemo"]:checked'
+    );
+
+    if (!videoDemoEl) {
+      statusText.innerText = "❌ Please select video demo option.";
+      return;
+    }
+
+    const data = {
+      firstName: document.getElementById("firstName").value.trim(),
+      lastName: document.getElementById("lastName").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      companyName: document.getElementById("companyName").value.trim(),
+      timeSlot: document.getElementById("timeSlot").value,
+      videoDemo: videoDemoEl.value,
+      message: document.getElementById("message").value.trim(),
+    };
+
+    statusText.innerText = "Sending message...";
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        statusText.innerText = "✅ Message sent successfully!";
+        contactForm.reset();
+      } else {
+        statusText.innerText =
+          result.message || "❌ Failed to send message.";
+      }
+    } catch (error) {
+      console.error(error);
+      statusText.innerText = "❌ Server error.";
+    }
+  });
 </script>
 
 </body>
